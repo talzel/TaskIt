@@ -16,6 +16,10 @@ t.card('all').then(function(card){
 
 console.log(text)
 
+console.log(t.card('all'))
+
+console.log(text)
+
 
 // t.render(function(){
 //     // this function we be called once on initial load
