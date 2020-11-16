@@ -5,7 +5,7 @@ var onBtnClick = function (t, opts) {
   console.log('Someone clicked the button');
   t.modal({
     // the url to load for the iframe
-    url: './modal.html',
+    url: './household_metrics.html',
     // optional arguments to be passed to the iframe as query parameters
     // access later with t.arg('text')
     args: { text: 'Hello' },
