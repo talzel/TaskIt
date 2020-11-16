@@ -2,10 +2,10 @@ var WHITE_ICON = 'https://cdn.hyperdev.com/us-east-1%3A3d31b21c-01a0-4da2-8827-4
 var BLACK_ICON = 'https://cdn.hyperdev.com/us-east-1%3A3d31b21c-01a0-4da2-8827-4bc6e88b7618%2Ficon-black.svg';
 
 var onBtnClick = function (t, opts) {
-  console.log('Someone clicked the button');
+  // console.log('Someone clicked the button');
   t.modal({
     // the url to load for the iframe
-    url: './household_metrics.html',
+    url: './household_management_data.html',
     // optional arguments to be passed to the iframe as query parameters
     // access later with t.arg('text')
     args: { text: 'Hello' },
@@ -21,26 +21,28 @@ var onBtnClick = function (t, opts) {
     title: 'Household Management Data',
     // optional action buttons for header chrome
     // max 3, up to 1 on right side
-    actions: [{
-      icon: './images/icon.svg',
-      url: 'https://google.com',
-      alt: 'Leftmost',
-      position: 'left',
-    }, {
-      icon: './images/icon.svg',
-      callback: (tr) => tr.popup({
-        title: tr.localizeKey('appear_in_settings'),
-        url: 'settings.html',
-        height: 164,
-      }),
-      alt: 'Second from left',
-      position: 'left',
-    }, {
-      icon: './images/icon.svg',
-      callback: () => console.log(':tada:'),
-      alt: 'Right side',
-      position: 'right',
-    }],
+    actions: [
+      // {
+    //   icon: './images/icon.svg',
+    //   url: 'https://google.com',
+    //   alt: 'Leftmost',
+    //   position: 'left',
+    // }, {
+    //   icon: './images/icon.svg',
+    //   callback: (tr) => tr.popup({
+    //     title: tr.localizeKey('appear_in_settings'),
+    //     url: 'settings.html',
+    //     height: 164,
+    //   }),
+    //   alt: 'Second from left',
+    //   position: 'left',
+    // }, {
+    //   icon: './images/icon.svg',
+    //   callback: () => console.log(':tada:'),
+    //   alt: 'Right side',
+    //   position: 'right',
+    // }
+  ],
   })
 };
 
