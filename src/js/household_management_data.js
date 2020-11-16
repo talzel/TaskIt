@@ -23,7 +23,7 @@ console.log(text)
 // console.log(t.card('all'))
 
 var cards = t.cards('id', 'name', 'members', 'labels')
-
+console.log(cards)
 console.log(text)
 
 
