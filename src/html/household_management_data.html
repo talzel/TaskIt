@@ -2,17 +2,23 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/house_hold_management.css">
+    <link rel="stylesheet" href="../css/household_management_data.css">
     <title>Household Metrics</title>
   </head>
 
   <body>
     <script src="https://d3js.org/d3.v6.min.js"></script>
-    <!-- <script src="../js/board_bi.js"></script> -->
+    <script src="../js/household_management_data.js"></script>
 
     <svg width="500" height="500" id="weekly_chores"></svg>    
     <script>
       // get data from dashboard cards: each 
+      
+      cards.then(function(card){
+        console.log(card);
+        return 1;
+      })
+
       var data = [2, 4, 8, 10];
   
       var svg = d3.select("#weekly_chores"),
@@ -83,7 +89,7 @@
   </script>
 
 
-    <svg width="500" height="500" id="weekly_chores_by_type">
+    <!-- <svg width="500" height="500" id="weekly_chores_by_type">
     </svg>
     <script>
 
@@ -139,7 +145,7 @@
   
   </script>
 
-    <svg width="500" height="500" id="trends_on_chores"></svg>
+    <svg width="500" height="500" id="trends_on_chores"></svg> -->
 
 
   </body>
