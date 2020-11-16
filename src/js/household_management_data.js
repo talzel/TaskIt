@@ -9,6 +9,13 @@ console.log(text)
 //     console.log(card);
 //     return 1;
 //   })
+t.card('all').then(function(card){
+  console.log(card);
+  return 1;
+})
+
+console.log(text)
+
 
 // t.render(function(){
 //     // this function we be called once on initial load
