@@ -24,6 +24,7 @@ console.log(text)
 
 var cards = t.cards('id', 'name', 'members', 'labels')
 console.log(cards)
+console.log(cards[20])
 console.log(text)
 
 
