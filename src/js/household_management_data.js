@@ -9,10 +9,13 @@ console.log(text)
 //     console.log(card);
 //     return 1;
 //   })
-t.card('all').then(function(card){
-  console.log(card);
-  return 1;
-})
+// t.card('all').then(function(card){
+//   console.log(card);
+//   return 1;
+// })
+
+var lists = t.lists('cards')
+console.log(lists)
 
 console.log(text)
 
