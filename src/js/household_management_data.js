@@ -4,11 +4,11 @@ var t = TrelloPowerUp.iframe();
 var text = t.arg('text')
 console.log(text)
 
-var cards = t.arg('cards')
-cards.then(function(card){
-    console.log(card);
-    return 1;
-  })
+// var cards = t.arg('cards')
+// cards.then(function(card){
+//     console.log(card);
+//     return 1;
+//   })
 
 // t.render(function(){
 //     // this function we be called once on initial load
