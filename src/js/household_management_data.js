@@ -16,6 +16,7 @@ console.log(text)
 
 var lists = t.lists('cards')
 console.log(lists)
+console.log(lists[0])
 
 console.log(text)
 
