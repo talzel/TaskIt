@@ -42,7 +42,7 @@ var onClickHouseManagementData = function (t, opts) {
     //   alt: 'Right side',
     //   position: 'right',
     // }
-  ],
+  ]
   })
 };
 
