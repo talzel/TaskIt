@@ -16,11 +16,13 @@ console.log(text)
 
 var lists = t.lists('cards')
 console.log(lists)
-console.log(lists[0])
+// console.log(lists[0])
 
 console.log(text)
 
-console.log(t.card('all'))
+// console.log(t.card('all'))
+
+var cards = t.cards('id', 'name', 'members', 'labels')
 
 console.log(text)
 
