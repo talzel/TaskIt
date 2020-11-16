@@ -9,9 +9,7 @@
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <!-- <script src="../js/board_bi.js"></script> -->
 
-    <svg width="500" height="500">
-      <rect x="0" y="0" width="300" height="200" fill="teal"></rect>
-    </svg>
+    <svg width="500" height="500"></svg>    
     <script>
       var data = [2, 4, 8, 10];
   
@@ -47,8 +45,41 @@
   </script>
 
     <svg width="500" height="500">
-      <rect x="0" y="0" width="300" height="200" fill="teal"></rect>
     </svg>
+    <script>
+      var data = [2, 4, 8, 10, 12, 14, 17];
+  
+      var svg = d3.select("svg"),
+          width = svg.attr("width"),
+          height = svg.attr("height"),
+          radius = Math.min(width, height) / 2,
+          g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+  
+      var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c']);
+  
+      // Generate the pie
+      var pie = d3.pie();
+  
+      // Generate the arcs
+      var arc = d3.arc()
+                  .innerRadius(0)
+                  .outerRadius(radius);
+  
+      //Generate groups
+      var arcs = g.selectAll("arc")
+                  .data(pie(data))
+                  .enter()
+                  .append("g")
+                  .attr("class", "arc")
+  
+      //Draw arc paths
+      arcs.append("path")
+          .attr("fill", function(d, i) {
+              return color(i);
+          })
+          .attr("d", arc);
+  </script>
+
 
     <svg width="500" height="500">
       <rect x="0" y="0" width="300" height="200" fill="teal"></rect>
