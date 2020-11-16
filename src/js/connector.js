@@ -2,10 +2,10 @@ var WHITE_ICON = '../img/house_hold_managment_icon.jpg';
 var BLACK_ICON = '../img/house_hold_managment_icon.jpg';
 
 var onClickHouseManagementData = function (t, opts) {
-  t.card('all').then(function(card){
-    console.log(card);
-    return 1;
-  })
+  // t.card('all').then(function(card){
+  //   console.log(card);
+  //   return 1;
+  // })
   // console.log('Someone clicked the button');
   t.modal({
     // the url to load for the iframe
@@ -13,7 +13,7 @@ var onClickHouseManagementData = function (t, opts) {
 
     // optional arguments to be passed to the iframe as query parameters
     // access later with t.arg('text')
-    args: { text: 'Hello', cards: t.card('all')},
+    args: { text: 'Hello'} //, cards: t.card('all')},
     // optional color for header chrome
     accentColor: '#F2D600',
     // initial height for iframe
