@@ -1,19 +1,26 @@
 
 var t = TrelloPowerUp.iframe();
 
+var text = t.arg('text')
+console.log(text)
+
 var cards = t.arg('cards')
+cards.then(function(card){
+    console.log(card);
+    return 1;
+  })
 
-t.render(function(){
-    // this function we be called once on initial load
-    // and then called each time something changes that
-    // you might want to react to, such as new data being
-    // stored with t.set()
-    cards.then(function(card){
-        console.log(card);
-        return 1;
-      })
+// t.render(function(){
+//     // this function we be called once on initial load
+//     // and then called each time something changes that
+//     // you might want to react to, such as new data being
+//     // stored with t.set()
+//     cards.then(function(card){
+//         console.log(card);
+//         return 1;
+//       })
 
-  });
+//   });
   
   // Important! If you are using the overlay, you should implement
   // the following two methods to ensure that closing the overlay
