@@ -46,7 +46,7 @@ var onClickHouseManagementData = function (t, opts) {
   })
 };
 
-window.TrelloPowerUp.initialize({
+TrelloPowerUp.initialize({
   'board-buttons': function (t, opts) {
     return [{
       // we can either provide a button that has a callback function
