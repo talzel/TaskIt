@@ -1,0 +1,16 @@
+{
+  "name": "TaskIt",
+  "version": "1.0.0",
+  "description": "TaskIt power up for trello - project for Shevyon Hackathon",
+  "main": "index.js",
+  "repository": "https://github.com/talzel/TaskIt.git",
+  "author": "talzelig@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build src/html/*.html"
+  },
+  "private": false,
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
