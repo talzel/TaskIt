@@ -23,7 +23,9 @@ console.log(text)
 // console.log(t.card('all'))
 t.member
 
-var cards = t.cards('id', 'name', 'members', 'labels').
+var cards = t.cards('id', 'name', 'members', 'labels')
+console.log(text)
+
 var cards2 = cards.then(function(card){
     return card;
 });
