@@ -26,11 +26,13 @@ t.member
 var cards = t.cards('id', 'name', 'members', 'labels')
 console.log(text)
 
+console.log("bobo")
 var cards2 = cards.then(function(card){
-    return card;
+    return card.members;
 });
 
 console.log(cards2)
+console.log("koko")
 // var lucky = cards.prototype.filter(function(card) {
 //     return card.members[0] == t.member;
 //   });
