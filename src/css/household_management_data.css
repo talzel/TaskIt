@@ -1,13 +1,17 @@
-.first{
+.wc_wapper{
     width:50%;
     height:300px;
     position:absolute;
     /* border:1px solid red; */
 }
-.second{
+.mc_wrapper{
    /* border:2px solid blue; */
    /* width:50%;
    height:200px; */
    position: relative;
    top: 315px;
+}
+
+body {
+    background-color:  #FEECDA;
 }
