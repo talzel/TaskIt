@@ -30,7 +30,7 @@
           radius = Math.min(width, height) / 2,
           g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
   
-      var color = d3.scaleOrdinal(['#FFDDD3','CBE1EF']);
+      var color = d3.scaleOrdinal(['#FFDDD3','#CBE1EF']);
   
       // Generate the pie
       var pie = d3.pie();
@@ -57,10 +57,10 @@
 
   <div id="mc_wrapper">
     <p>Monthly Chores</p>
-    <svg width="500" height="500" id="monthly_chores"></svg>
+    <svg width="400" height="400" id="monthly_chores"></svg>
   </div>
   <script>
-    var data = [2, 4, 8, 10, 12, 14, 17];
+    var data = [17,13];
   
     var svg = d3.select("#monthly_chores"),
         width = svg.attr("width"),
@@ -68,7 +68,7 @@
         radius = Math.min(width, height) / 2,
         g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
   
-    var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c']);
+    var color = d3.scaleOrdinal(['#FFDDD3','#CBE1EF']);
   
       // Generate the pie
     var pie = d3.pie();
