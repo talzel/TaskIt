@@ -11,7 +11,7 @@
     <script src="https://p.trellocdn.com/power-up.min.js" crossorigin="anonymous"></script>
     <script src="../js/household_management_data.js"></script>
     <div id="wc_wrapper">
-      <p>Weekly Chores</p>
+      <p>Weekly Total Chores</p>
       <svg width="400" height="400" id="weekly_chores"></svg>
     </div>    
     <script>
@@ -56,7 +56,7 @@
   </script>
 
   <div id="mc_wrapper">
-    <p>Monthly Chores</p>
+    <p>Monthly Total Chores</p>
     <svg width="400" height="400" id="monthly_chores"></svg>
   </div>
   <script>
@@ -93,7 +93,20 @@
         .attr("d", arc);
   </script>
 
+  <div id="totask_weekly_wrapper">
+    <p>Time spent by types of tasks this week</p>
+    <svg width="400" height="400" id="type_of_tasks_weekly"></svg>
+  </div>    
 
+  <div id="totask_monthly_wrapper">
+    <p>Time spent by types of tasks this Month</p>
+    <svg width="400" height="400" id="type_of_tasks_monthly"></svg>
+</div>   
+
+<div id="tswk_wrapper">
+  <p>Time with the kids</p>
+  <svg width="800" height="800" id="time_spent_with_kids"></svg>
+</div>    
     <!-- <svg width="500" height="500" id="weekly_chores_by_type">
     </svg>
     <script>
