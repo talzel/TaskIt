@@ -4,6 +4,7 @@
     position:absolute;
     /* border:1px solid red; */
     text-align: center;
+    border-bottom: 1px solid silver;
 }
 
 #weekly_chores{
@@ -28,3 +29,33 @@
 body {
     background-color:  #FDF8E2;
 }
+
+
+#totask_weekly_wrapper{
+    width:550px;
+    height:550px;
+    position:absolute;
+    /* border:1px solid red; */
+    text-align: center;
+    left: 550px;
+}
+
+
+#totask_monthly_wrapper{
+    /* border:2px solid blue; */
+    width:550px;
+    height:550px;
+    position: relative;
+    top: 571px;
+    left: 550px;
+    text-align: center;
+ }
+
+ #tswk_wrapper{
+    /* border:2px solid blue; */
+    width:550px;
+    height:550px;
+    position: relative;
+    left: 1100px;
+    text-align: center;
+ }
