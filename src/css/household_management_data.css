@@ -3,10 +3,12 @@
     height:550px;
     position:absolute;
     /* border:1px solid red; */
+    text-align: center;
 }
 
 #weekly_chores{
-    left: 50%
+    left: 50%;
+    margin-top: 25px;
 }
 
 #mc_wrapper{
@@ -14,11 +16,13 @@
    width:550px;
    height:550px;
    position: relative;
-   top: 315px;
+   top: 571px;
+   text-align: center;
 }
 
 #monthly_chores{
-    left: 50%
+    left: 50%;
+    margin-top: 25px;
 }
 
 body {
