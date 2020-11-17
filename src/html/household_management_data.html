@@ -10,7 +10,7 @@
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://p.trellocdn.com/power-up.min.js" crossorigin="anonymous"></script>
     <script src="../js/household_management_data.js"></script>
-    <svg width="500" height="500" id="weekly_chores"></svg>    
+    <div id="wc_wrapper"><svg width="500" height="500" id="weekly_chores"></svg></div>    
     <script>
       // get data from dashboard cards: each 
       
@@ -52,40 +52,39 @@
           .attr("d", arc);
   </script>
 
-    <svg width="500" height="500" id="monthly_chores">
-    </svg>
-    <script>
-      var data = [2, 4, 8, 10, 12, 14, 17];
+  <div id="mc_wrapper"><svg width="500" height="500" id="monthly_chores"></svg></div>
+  <script>
+    var data = [2, 4, 8, 10, 12, 14, 17];
   
-      var svg = d3.select("#monthly_chores"),
-          width = svg.attr("width"),
-          height = svg.attr("height"),
-          radius = Math.min(width, height) / 2,
-          g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+    var svg = d3.select("#monthly_chores"),
+        width = svg.attr("width"),
+        height = svg.attr("height"),
+        radius = Math.min(width, height) / 2,
+        g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
   
-      var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c']);
+    var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c']);
   
       // Generate the pie
-      var pie = d3.pie();
+    var pie = d3.pie();
   
       // Generate the arcs
-      var arc = d3.arc()
+    var arc = d3.arc()
                   .innerRadius(0)
                   .outerRadius(radius);
   
       //Generate groups
-      var arcs = g.selectAll("arc")
-                  .data(pie(data))
-                  .enter()
-                  .append("g")
-                  .attr("class", "arc")
+    var arcs = g.selectAll("arc")
+                .data(pie(data))
+                .enter()
+                .append("g")
+                .attr("class", "arc")
   
       //Draw arc paths
-      arcs.append("path")
-          .attr("fill", function(d, i) {
-              return color(i);
-          })
-          .attr("d", arc);
+    arcs.append("path")
+        .attr("fill", function(d, i) {
+            return color(i);
+        })
+        .attr("d", arc);
   </script>
 
 
