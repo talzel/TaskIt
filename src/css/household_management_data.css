@@ -1,16 +1,26 @@
 .wc_wapper{
-    width:50%;
-    height:300px;
+    width:550px;
+    height:550px;
     position:absolute;
     /* border:1px solid red; */
 }
+
+.weekly_chores{
+    left: 50%
+}
+
 .mc_wrapper{
    /* border:2px solid blue; */
-   /* width:50%;
-   height:200px; */
+   width:550px;
+   height:550px;
    position: relative;
    top: 315px;
 }
+
+.monthly_chores{
+    left: 50%
+}
+
 
 body {
     background-color:  #FEECDA;
