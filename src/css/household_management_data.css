@@ -5,6 +5,8 @@
     /* border:1px solid red; */
     text-align: center;
     border-bottom: 1px solid silver;
+    border-left: 1px solid silver;
+
 }
 
 #weekly_chores{
@@ -19,6 +21,8 @@
    position: relative;
    top: 571px;
    text-align: center;
+   border-left: 1px solid silver;
+
 }
 
 #monthly_chores{
@@ -38,6 +42,10 @@ body {
     /* border:1px solid red; */
     text-align: center;
     left: 550px;
+    top: 10px;
+    border-bottom: 1px solid silver;
+    border-left: 1px solid silver;
+
 }
 
 
@@ -46,7 +54,7 @@ body {
     width:550px;
     height:550px;
     position: relative;
-    top: 571px;
+    /* top: 571px; */
     left: 550px;
     text-align: center;
  }
