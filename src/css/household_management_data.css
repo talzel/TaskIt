@@ -4,8 +4,8 @@
     position:absolute;
     /* border:1px solid red; */
     text-align: center;
-    border-bottom: 1px solid silver;
-    border-left: 1px solid silver;
+    /* border-bottom: 1px solid silver;
+    border-left: 1px solid silver; */
 
 }
 
@@ -20,8 +20,8 @@
    height:550px;
    position: relative;
    top: 571px;
-   text-align: center;
-   border-left: 1px solid silver;
+   /* text-align: center;
+   border-left: 1px solid silver; */
 
 }
 
@@ -43,8 +43,8 @@ body {
     text-align: center;
     left: 550px;
     top: 10px;
-    border-bottom: 1px solid silver;
-    border-left: 1px solid silver;
+    /* border-bottom: 1px solid silver;
+    border-left: 1px solid silver; */
 
 }
 
