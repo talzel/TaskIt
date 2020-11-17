@@ -15,7 +15,7 @@ var onClickHouseManagementData = function (t, opts) {
     // access later with t.arg('text')
     args: { text: 'Hello' }, //, cards: t.card('all')},
     // optional color for header chrome
-    accentColor: '#F2D600',
+    accentColor: '#ADD9E0',
     // initial height for iframe
     height: 500, // not used if fullscreen is true
     // whether the modal should stretch to take up the whole screen
