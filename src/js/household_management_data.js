@@ -23,14 +23,16 @@ console.log(text)
 // console.log(t.card('all'))
 t.member
 
-var cards = t.cards('id', 'name', 'members', 'labels')
-console.log(cards)
-console.log(cards[20])
+var cards = t.cards('id', 'name', 'members', 'labels').
+var cards2 = cards.then(function(card){
+    return card;
+});
 
-var lucky = cards.filter(function(card) {
-    return card.members[0] == t.member;
-  });
-console.log(lucky)
+console.log(cards2)
+// var lucky = cards.prototype.filter(function(card) {
+//     return card.members[0] == t.member;
+//   });
+// console.log(lucky)
 console.log(text)
 
 
