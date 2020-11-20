@@ -1,87 +1,87 @@
 
-var t = TrelloPowerUp.iframe();
+// var t = TrelloPowerUp.iframe();
 
-// var text = t.arg('text')
-// console.log(text)
+// // var text = t.arg('text')
+// // console.log(text)
 
-// console.log('-----------------------------------')
+// // console.log('-----------------------------------')
+// // var lists = t.lists('all')
+// // console.log(lists)
+// // console.log('-----------------------------------')
+
+// // lists.then(function(l){
+// //   console.log('~~')
+// //   console.log(l)
+// //   console.log('~~')
+// // })
+
+
+// // console.log('-----------------------------------')
+// var t = TrelloPowerUp.iframe();
 // var lists = t.lists('all')
-// console.log(lists)
-// console.log('-----------------------------------')
-
-// lists.then(function(l){
-//   console.log('~~')
-//   console.log(l)
-//   console.log('~~')
+// members = lists.then(function(lists){
+//   return lists.map( list => list.cards.map(card => card.members)) //.map( member => {member.initials)))
+// }).then(function(lists){
+//   return lists.flat().filter(function(el){
+//     return el != []
+//   }).flat()
+// }).then(function(members){
+//   return members.sort()
 // })
-
+// console.log('-----------------------------------')
+// console.log(members)
+// console.log('-----------------------------------')
 
 // console.log('-----------------------------------')
-var t = TrelloPowerUp.iframe();
-var lists = t.lists('all')
-members = lists.then(function(lists){
-  return lists.map( list => list.cards.map(card => card.members)) //.map( member => {member.initials)))
-}).then(function(lists){
-  return lists.flat().filter(function(el){
-    return el != []
-  }).flat()
-}).then(function(members){
-  return members.sort()
-})
-console.log('-----------------------------------')
-console.log(members)
-console.log('-----------------------------------')
+// distincts = members.then(function(ms){
+//   let acc = {};
+//   for (i = 0; i < ms.length; i++) {
+//     if (ms[i].initials in acc){
+//       acc[ms[i].initials] = acc[ms[i].initials] + 1
+//     } else {
+//       acc[ms[i].initials] = 0
+//     }
+//   }
+//   return acc
+// });
 
-console.log('-----------------------------------')
-distincts = members.then(function(ms){
-  let acc = {};
-  for (i = 0; i < ms.length; i++) {
-    if (ms[i].initials in acc){
-      acc[ms[i].initials] = acc[ms[i].initials] + 1
-    } else {
-      acc[ms[i].initials] = 0
-    }
-  }
-  return acc
-});
+// console.log(distincts)
+// console.log('-----------------------------------')
 
-console.log(distincts)
-console.log('-----------------------------------')
+// distinct.then(function(dists){
 
-distinct.then(function(dists){
+//   data = dists.values()
 
-  data = dists.values()
+//   var svg = d3.select("#weekly_chores"),
+//   width = svg.attr("width"),
+//   height = svg.attr("height"),
+//   radius = Math.min(width, height) / 2,
+//   g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-  var svg = d3.select("#weekly_chores"),
-  width = svg.attr("width"),
-  height = svg.attr("height"),
-  radius = Math.min(width, height) / 2,
-  g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+//   var color = d3.scaleOrdinal(['#FFDDD3','#CBE1EF']);
 
-  var color = d3.scaleOrdinal(['#FFDDD3','#CBE1EF']);
+//   // Generate the pie
+//   var pie = d3.pie();
 
-  // Generate the pie
-  var pie = d3.pie();
+//   // Generate the arcs
+//   var arc = d3.arc()
+//           .innerRadius(0)
+//           .outerRadius(radius);
 
-  // Generate the arcs
-  var arc = d3.arc()
-          .innerRadius(0)
-          .outerRadius(radius);
+//   //Generate groups
+//   var arcs = g.selectAll("arc")
+//           .data(pie(data))
+//           .enter()
+//           .append("g")
+//           .attr("class", "arc")
 
-  //Generate groups
-  var arcs = g.selectAll("arc")
-          .data(pie(data))
-          .enter()
-          .append("g")
-          .attr("class", "arc")
-
-  //Draw arc paths
-  arcs.append("path")
-  .attr("fill", function(d, i) {
-      return color(i);
-  })
-  .attr("d", arc);
-})
+//   //Draw arc paths
+//   arcs.append("path")
+//   .attr("fill", function(d, i) {
+//       return color(i);
+//   })
+//   .attr("d", arc);
+// })
 
 // var cards = t.arg('cards')
 // cards.then(function(card){
