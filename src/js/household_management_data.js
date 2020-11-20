@@ -19,7 +19,7 @@ console.log('-----------------------------------')
 // console.log('-----------------------------------')
 var lists = t.lists('all')
 members = lists.then(function(lists){
-  return lists.map( list => list.cards.map(card => card.members.map( member => {member.initials)))
+  return lists.map( list => list.cards.map(card => card.members))//.map( member => {member.initials)))
 }).then(function(lists){
   return lists.flat()
 })
