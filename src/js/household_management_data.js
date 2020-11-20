@@ -24,9 +24,11 @@ members = lists.then(function(lists){
   return lists.flat().filter(function(el){
     return el != []
   }).flat()
+}).then(function(members){
+  return members.sort()
 })
 console.log('-----------------------------------')
-console.log(members.sort())
+console.log(members)
 console.log('-----------------------------------')
 
 // var cards = t.arg('cards')
