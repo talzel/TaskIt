@@ -4,10 +4,10 @@ var t = TrelloPowerUp.iframe();
 // var text = t.arg('text')
 // console.log(text)
 
-console.log('-----------------------------------')
-var lists = t.lists('all')
-console.log(lists)
-console.log('-----------------------------------')
+// console.log('-----------------------------------')
+// var lists = t.lists('all')
+// console.log(lists)
+// console.log('-----------------------------------')
 
 // lists.then(function(l){
 //   console.log('~~')
@@ -17,6 +17,7 @@ console.log('-----------------------------------')
 
 
 // console.log('-----------------------------------')
+var t = TrelloPowerUp.iframe();
 var lists = t.lists('all')
 members = lists.then(function(lists){
   return lists.map( list => list.cards.map(card => card.members)) //.map( member => {member.initials)))
@@ -36,21 +37,9 @@ distincts = members.then(function(ms){
   let acc = {};
   for (i = 0; i < ms.length; i++) {
     if (ms[i].initials in acc){
-      // console.log('~~')
-      // console.log(acc)
-      // console.log('~~')
       acc[ms[i].initials] = acc[ms[i].initials] + 1
-      // console.log('~~~')
-      // console.log(acc)
-      // console.log('~~~')
     } else {
-      // console.log('~~~!')
-      // console.log(acc)
-      // console.log('~~~!')
       acc[ms[i].initials] = 0
-      // console.log('~~~~')
-      // console.log(acc)
-      // console.log('~~~~')
     }
   }
   return acc
