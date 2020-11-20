@@ -56,7 +56,7 @@ distincts = members.then(function(ms){
   return acc
 });
 
-console.log(distincts.values())
+console.log(distincts)
 console.log('-----------------------------------')
 
 distinct.then(function(dists){
