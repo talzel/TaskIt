@@ -9,6 +9,11 @@ var lists = t.lists('cards')
 console.log(lists)
 console.log('-----------------------------------')
 
+lists.then(function(l){
+  console.log('~~')
+  console.log(l)
+  console.log('~~')
+})
 
 
 // var cards = t.arg('cards')
