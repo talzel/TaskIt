@@ -35,11 +35,11 @@ console.log('-----------------------------------')
 distincts = members.then(function(ms){
   let acc = {};
   for (i = 0; i < ms.length; i++) {
-    if (ms[i] in acc){
+    if (ms[i].initials in acc){
       console.log('~~')
       console.log(acc)
       console.log('~~')
-      acc[ms[i]] = acc[ms[i]] + 1
+      acc[ms[i].initials] = acc[ms[i].initials] + 1
       console.log('~~~')
       console.log(acc)
       console.log('~~~')
@@ -47,7 +47,7 @@ distincts = members.then(function(ms){
       console.log('~~~!')
       console.log(acc)
       console.log('~~~!')
-      acc[ms[i]] = 0
+      acc[ms[i].initials] = 0
       console.log('~~~~')
       console.log(acc)
       console.log('~~~~')
