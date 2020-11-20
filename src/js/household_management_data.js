@@ -25,11 +25,18 @@ members = lists.then(function(lists){
     return el != []
   }).flat()
 }).then(function(members){
-  return members.sort((a,b) => a.id - b.id)
+  return members.sort()
 })
 console.log('-----------------------------------')
 console.log(members)
 console.log('-----------------------------------')
+
+console.log('-----------------------------------')
+uniq = members.then(function(ms){
+  return [...new Set(ms)]
+});
+console.log('-----------------------------------')
+
 
 // var cards = t.arg('cards')
 // cards.then(function(card){
