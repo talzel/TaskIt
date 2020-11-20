@@ -52,7 +52,7 @@
 
       distincts.then(function(dists){
 
-        data = dists.values()
+        data = Object.values(dists)
 
         var svg = d3.select("#weekly_chores"),
         width = svg.attr("width"),
