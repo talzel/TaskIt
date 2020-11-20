@@ -41,7 +41,7 @@ distincts = members.then(function(ms){
       acc[ms[i]] = 0
     }
   }
-  return [...new Set(ms)]
+  return acc
 });
 
 console.log(distincts)
