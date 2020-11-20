@@ -5,7 +5,7 @@ var t = TrelloPowerUp.iframe();
 // console.log(text)
 
 console.log('-----------------------------------')
-var lists = t.lists('cards')
+var lists = t.lists('all')
 console.log(lists)
 console.log('-----------------------------------')
 
