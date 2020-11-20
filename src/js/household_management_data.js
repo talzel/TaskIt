@@ -59,38 +59,40 @@ distincts = members.then(function(ms){
 console.log(distincts.values())
 console.log('-----------------------------------')
 
-data = distinct.values()
+distinct.then(function(dists){
 
-var svg = d3.select("#weekly_chores"),
-width = svg.attr("width"),
-height = svg.attr("height"),
-radius = Math.min(width, height) / 2,
-g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+  data = dists.values()
 
-var color = d3.scaleOrdinal(['#FFDDD3','#CBE1EF']);
+  var svg = d3.select("#weekly_chores"),
+  width = svg.attr("width"),
+  height = svg.attr("height"),
+  radius = Math.min(width, height) / 2,
+  g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-// Generate the pie
-var pie = d3.pie();
+  var color = d3.scaleOrdinal(['#FFDDD3','#CBE1EF']);
 
-// Generate the arcs
-var arc = d3.arc()
-        .innerRadius(0)
-        .outerRadius(radius);
+  // Generate the pie
+  var pie = d3.pie();
 
-//Generate groups
-var arcs = g.selectAll("arc")
-        .data(pie(data))
-        .enter()
-        .append("g")
-        .attr("class", "arc")
+  // Generate the arcs
+  var arc = d3.arc()
+          .innerRadius(0)
+          .outerRadius(radius);
 
-//Draw arc paths
-arcs.append("path")
-.attr("fill", function(d, i) {
-    return color(i);
+  //Generate groups
+  var arcs = g.selectAll("arc")
+          .data(pie(data))
+          .enter()
+          .append("g")
+          .attr("class", "arc")
+
+  //Draw arc paths
+  arcs.append("path")
+  .attr("fill", function(d, i) {
+      return color(i);
+  })
+  .attr("d", arc);
 })
-.attr("d", arc);
-
 
 // var cards = t.arg('cards')
 // cards.then(function(card){
