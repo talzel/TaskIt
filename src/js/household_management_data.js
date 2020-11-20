@@ -33,6 +33,14 @@ console.log('-----------------------------------')
 
 console.log('-----------------------------------')
 distincts = members.then(function(ms){
+  let acc = {};
+  for (i = 0; i < ms.length; i++) {
+    if (ms[i] in acc){
+      acc[ms[i]] = acc[ms[i]] + 1
+    } else {
+      acc[ms[i]] = 0
+    }
+  }
   return [...new Set(ms)]
 });
 
