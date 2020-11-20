@@ -23,7 +23,7 @@ members = lists.then(function(lists){
 }).then(function(lists){
   return lists.flat().filter(function(el){
     return el != []
-  }).flat()
+  }).flat().sort()
 })
 console.log('-----------------------------------')
 console.log(members)
