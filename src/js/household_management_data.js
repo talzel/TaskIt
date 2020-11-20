@@ -25,7 +25,7 @@ members = lists.then(function(lists){
     return el != []
   }).flat()
 }).then(function(members){
-  return members.sort()
+  return members.sort((a,b) => a.id - b.id)
 })
 console.log('-----------------------------------')
 console.log(members)
