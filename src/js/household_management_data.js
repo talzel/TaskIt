@@ -4,10 +4,10 @@ var t = TrelloPowerUp.iframe();
 // var text = t.arg('text')
 // console.log(text)
 
-// console.log('-----------------------------------')
-// var lists = t.lists('all')
-// console.log(lists)
-// console.log('-----------------------------------')
+console.log('-----------------------------------')
+var lists = t.lists('all')
+console.log(lists)
+console.log('-----------------------------------')
 
 // lists.then(function(l){
 //   console.log('~~')
@@ -19,7 +19,7 @@ var t = TrelloPowerUp.iframe();
 // console.log('-----------------------------------')
 var lists = t.lists('all')
 members = lists.then(function(lists){
-  return lists.map( list => list.cards.map(card => card.members.map( member => member.initials)))
+  return lists.map( list => list.cards.map(card => card.members.map( member => {member.initials)))
 }).then(function(lists){
   return lists.flat()
 })
