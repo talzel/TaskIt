@@ -16,7 +16,7 @@ lists.then(function(l){
 })
 
 members = lists.then(function(lists){
-  return lists.map( list => l.cards.map(card => card.members.map( member => member.initials)))
+  return lists.map( list => list.cards.map(card => card.members.map( member => member.initials)))
 })
 
 console.log(members)
