@@ -17,6 +17,7 @@ var t = TrelloPowerUp.iframe();
 
 
 console.log('-----------------------------------')
+var lists = t.lists('all')
 members = lists.then(function(lists){
   return lists.map( list => list.cards.map(card => card.members.map( member => member.initials)))
 })
