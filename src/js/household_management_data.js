@@ -15,6 +15,11 @@ lists.then(function(l){
   console.log('~~')
 })
 
+members = lists.then(function(lists){
+  return lists.map( list => l.cards.map(card => card.members.map( member => member.initials)))
+})
+
+console.log(members)
 
 // var cards = t.arg('cards')
 // cards.then(function(card){
