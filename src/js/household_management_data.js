@@ -4,22 +4,24 @@ var t = TrelloPowerUp.iframe();
 // var text = t.arg('text')
 // console.log(text)
 
-console.log('-----------------------------------')
-var lists = t.lists('all')
-console.log(lists)
-console.log('-----------------------------------')
+// console.log('-----------------------------------')
+// var lists = t.lists('all')
+// console.log(lists)
+// console.log('-----------------------------------')
 
-lists.then(function(l){
-  console.log('~~')
-  console.log(l)
-  console.log('~~')
-})
+// lists.then(function(l){
+//   console.log('~~')
+//   console.log(l)
+//   console.log('~~')
+// })
 
+
+console.log('-----------------------------------')
 members = lists.then(function(lists){
   return lists.map( list => list.cards.map(card => card.members.map( member => member.initials)))
 })
-
 console.log(members)
+console.log('-----------------------------------')
 
 // var cards = t.arg('cards')
 // cards.then(function(card){
@@ -45,6 +47,7 @@ console.log(members)
 
 // console.log("bobo")
 // var cards2 = cards.then(function(card){
+
 //     console.log(card)
 //     return []
 // });
@@ -67,7 +70,6 @@ console.log(members)
 //         console.log(card);
 //         return 1;
 //       })
-
 //   });
   
   // Important! If you are using the overlay, you should implement
