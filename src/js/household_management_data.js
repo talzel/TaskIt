@@ -36,9 +36,21 @@ distincts = members.then(function(ms){
   let acc = {};
   for (i = 0; i < ms.length; i++) {
     if (ms[i] in acc){
+      console.log('~~')
+      console.log(acc)
+      console.log('~~')
       acc[ms[i]] = acc[ms[i]] + 1
+      console.log('~~~')
+      console.log(acc)
+      console.log('~~~')
     } else {
+      console.log('~~~!')
+      console.log(acc)
+      console.log('~~~!')
       acc[ms[i]] = 0
+      console.log('~~~~')
+      console.log(acc)
+      console.log('~~~~')
     }
   }
   return acc
