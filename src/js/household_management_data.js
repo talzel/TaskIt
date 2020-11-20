@@ -1,8 +1,15 @@
 
 var t = TrelloPowerUp.iframe();
 
-var text = t.arg('text')
-console.log(text)
+// var text = t.arg('text')
+// console.log(text)
+
+console.log('-----------------------------------')
+var lists = t.lists('cards')
+console.log(lists)
+console.log('-----------------------------------')
+
+
 
 // var cards = t.arg('cards')
 // cards.then(function(card){
@@ -14,31 +21,31 @@ console.log(text)
 //   return 1;
 // })
 
-var lists = t.lists('cards')
-console.log(lists)
+
+
 // console.log(lists[0])
 
-console.log(text)
+// console.log(text)
 
-// console.log(t.card('all'))
-t.member
+// // console.log(t.card('all'))
+// // t.member
 
-var cards = t.cards('id', 'name', 'members', 'labels')
-console.log(text)
+// var cards = t.cards('id', 'name', 'members', 'labels')
+// console.log(text)
 
-console.log("bobo")
-var cards2 = cards.then(function(card){
-    console.log(card)
-    return []
-});
+// console.log("bobo")
+// var cards2 = cards.then(function(card){
+//     console.log(card)
+//     return []
+// });
 
-console.log(cards2)
-console.log("koko")
-// var lucky = cards.prototype.filter(function(card) {
-//     return card.members[0] == t.member;
-//   });
-// console.log(lucky)
-console.log(text)
+// console.log(cards2)
+// console.log("koko")
+// // var lucky = cards.prototype.filter(function(card) {
+// //     return card.members[0] == t.member;
+// //   });
+// // console.log(lucky)
+// console.log(text)
 
 
 // t.render(function(){
