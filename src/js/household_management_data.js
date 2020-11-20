@@ -32,9 +32,11 @@ console.log(members)
 console.log('-----------------------------------')
 
 console.log('-----------------------------------')
-uniq = members.then(function(ms){
+distincts = members.then(function(ms){
   return [...new Set(ms)]
 });
+
+console.log(distincts)
 console.log('-----------------------------------')
 
 
